@@ -57,24 +57,23 @@ call plug#begin('~/.vim/plugged')
 
 " Bloat ================================================================ {{
 
+	Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'vim-airline/vim-airline'
 	Plug 'joshdick/onedark.vim'
 	Plug 'kyoz/purify', { 'rtp': 'vim' }
-	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " Shows colors from hex and rgb codes
+	"Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " Shows colors from hex and rgb codes
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'psliwka/vim-smoothie'
 	Plug 'vimwiki/vimwiki', { 'branch' : 'dev' }
 	Plug 'xuhdev/vim-latex-live-preview'
 	Plug 'onsails/lspkind-nvim'
 	Plug 'kyazdani42/nvim-web-devicons'
-	Plug 'romgrk/barbar.nvim'
 	Plug 'Yggdroot/indentLine'
 	Plug 'glepnir/dashboard-nvim'
 	Plug 'nvim-lua/popup.nvim'
 	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim'
 
 " =============================================}}
 
@@ -105,6 +104,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'mxw/vim-jsx'
 
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'turbio/bracey.vim'
 
 " =============================================}}}
 " ========= Unused plugins ========== {{{
