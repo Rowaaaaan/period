@@ -1,6 +1,6 @@
 " Single keybinds
-nnoremap <silent> <Tab> :BufferNext!<CR>
-nnoremap <silent> <S-Tab> :BufferPrevious!<CR>
+nnoremap <silent> <Tab> :bn!<CR>
+nnoremap <silent> <S-Tab> :bp!<CR>
 nnoremap <silent> <A-j> :resize -5<CR>
 nnoremap <silent> <A-k> :resize +5<CR>
 nnoremap <silent> <A-h> <C-W>5<
@@ -85,10 +85,10 @@ let g:which_key_map['b'] = {
 
 let g:which_key_map['g'] = {
 	\ 'name' : 'Git'         ,
-	\ 's' : [':Gstatus'      , 'git status' ],
-	\ 'p' : [':G push'       , 'git push'   ],
-	\ 'g' : [':G pull'       , 'git pull'   ],
-	\ 'c' : [':G commit'     , 'git commit' ],
+	\ 's' : [':Git'            , 'git status' ],
+	\ 'p' : [':Git push'       , 'git push'   ],
+	\ 'g' : [':Git pull'       , 'git pull'   ],
+	\ 'c' : [':Git commit'     , 'git commit' ],
 	\ }
 
 let g:which_key_map['s'] = {
@@ -99,4 +99,11 @@ let g:which_key_map['s'] = {
 	\ }
 
 " ==================================== }}
+
+let g:which_key_map['l'] = {
+	\ 'name' : 'LSP'               ,
+	\ 'o': [':CocList outline'     ,	 'list outline'],
+	\ 'd': [':CocList diagnostics' , 'list diagnostics'],
+	\ }
+
 call which_key#register('<Space>', "g:which_key_map")

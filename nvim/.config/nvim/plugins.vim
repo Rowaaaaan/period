@@ -104,7 +104,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'mxw/vim-jsx'
 
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'turbio/bracey.vim'
+	Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
 " =============================================}}}
 " ========= Unused plugins ========== {{{
