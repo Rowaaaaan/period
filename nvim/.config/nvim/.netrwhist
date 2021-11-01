@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/rowan/Documents/HTML_Study'
 let g:netrw_dirhist_2='/home/rowan/.config/nvim'
 let g:netrw_dirhist_1='/home/rowan/Documents/testfolder'
 let g:netrw_dirhist_0='/run/media/rowan/rootfs/etc/wpa_supplicant'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/home/rowan/Documents/Work/data-structures'
 let g:netrw_dirhist_6='/home/rowan/Documents/Work/data-structures/com'
 let g:netrw_dirhist_5='/home/rowan/Documents/Work/data-structures/com/williamfiset'
 let g:netrw_dirhist_4='/home/rowan/Documents/Work/data-structures/com/williamfiset/datastructures'
-let g:netrw_dirhist_3='/home/rowan/Documents/Work/data-structures/com/williamfiset/datastructures/hashtable'
