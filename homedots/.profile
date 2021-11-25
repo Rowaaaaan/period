@@ -28,6 +28,8 @@ fi
 
 # Allows Anki to work in Wayland because wayland is ultra mega ass, and doesn't have the QT libraries it needs
 
-export QT_QPA_PLATFORM=wayland
-export ANKI_WAYLAND=1
-. "$HOME/.cargo/env"
+# export QT_QPA_PLATFORM=wayland
+# export ANKI_WAYLAND=1
+# . "$HOME/.cargo/env"
+
+setxkbmap -option caps:swapescape

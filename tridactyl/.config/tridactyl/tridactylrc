@@ -121,9 +121,9 @@ bind ;v hint -W mpvsafe
 bind ;V hint -V
 bind ;w hint -w
 bind ;t hint -W tabopen
-bind ;O hint -W fillcmdline_notrail open 
-bind ;W hint -W fillcmdline_notrail winopen 
-bind ;T hint -W fillcmdline_notrail tabopen 
+bind ;O hint -W fillcmdline_notrail open
+bind ;W hint -W fillcmdline_notrail winopen
+bind ;T hint -W fillcmdline_notrail tabopen
 bind ;z hint -z
 bind ;m composite hint -Jpipe img src | open images.google.com/searchbyimage?image_url=
 bind ;M composite hint -Jpipe img src | tabopen images.google.com/searchbyimage?image_url=
@@ -164,6 +164,12 @@ bind zO zoom 0.3
 bind . repeat
 bind <AS-ArrowUp><AS-ArrowUp><AS-ArrowDown><AS-ArrowDown><AS-ArrowLeft><AS-ArrowRight><AS-ArrowLeft><AS-ArrowRight>ba open https://www.youtube.com/watch?v=M3iOROuTuMA
 bind gd tabdetach
+bind gnd tabopen https://discord.com/app
+bind god open https://discord.com/app
+bind gwd winopen https://discord.com/app
+bind gnm tabopen https://messenger.com
+bind gom open https://messenger.com
+bind gwm winopen https://messenger.com
 bind --mode=ignore <Escape> mode normal
 bind --mode=ignore n findnext
 bind --mode=ignore <S-Insert> mode normal
@@ -230,7 +236,7 @@ alias colors colourscheme
 alias !js fillcmdline_tmp 3000 !js is deprecated. Please use js instead
 alias !jsb fillcmdline_tmp 3000 !jsb is deprecated. Please use jsb instead
 alias get_current_url js document.location.href
-alias current_url composite get_current_url | fillcmdline_notrail 
+alias current_url composite get_current_url | fillcmdline_notrail
 alias stop js window.stop()
 alias zo zoom
 alias installnative nativeinstall
