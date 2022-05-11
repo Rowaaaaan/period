@@ -6,6 +6,7 @@ set tabopencontaineraware true
 set followpagepatterns.next ^((N|n)ext|(N|n)ewer|prochain)\b|»|>>
 set followpagepatterns.prev ^((P|p)rev(ious)?|older|précédent)\b|«|<<
 set smoothscroll false
+set update.lastchecktime 1639311895747
 
 " Binds
 bind yT clipboard yanktitle
@@ -16,6 +17,7 @@ bind j scrollline 5
 bind k scrollline -5
 bind yf hint -y
 unbind tr
+unbind <F1>
 bind <C-]> followpage
 bind <C-[> followpage prev
 bind yn clipboard yanktitle
@@ -170,6 +172,15 @@ bind gwd winopen https://discord.com/app
 bind gnm tabopen https://messenger.com
 bind gom open https://messenger.com
 bind gwm winopen https://messenger.com
+bind gnc tabopen https://dlsl.instructure.com
+bind goc open https://dlsl.instructure.com
+bind gwc winopen https://dlsl.instructure.com
+bind gny tabopen https://discord.com/channels/635612648934735892/635625758412505093
+bind goy open https://discord.com/channels/635612648934735892/635625758412505093
+bind gwy winopen https://discord.com/channels/635612648934735892/635625758412505093
+bind gnp tabopen https://protonmail.com
+bind gop open https://protonmail.com
+bind gwp winopen https://protonmail.com
 bind --mode=ignore <Escape> mode normal
 bind --mode=ignore n findnext
 bind --mode=ignore <S-Insert> mode normal
