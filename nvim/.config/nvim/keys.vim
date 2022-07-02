@@ -6,6 +6,18 @@ nnoremap <silent> <A-k> :resize +5<CR>
 nnoremap <silent> <A-h> <C-W>5<
 nnoremap <silent> <A-l> <C-W>5>
 
+" CoC Tab autocomplete
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
 " Which_key config
 let g:mapleader=" "
 
@@ -47,6 +59,7 @@ tnoremap <Esc> <C-\><C-n>
 let g:which_key_map['f'] = {
 	\ 'name' : 'File' ,
 	\ 's' : [":w"                   , 'save file'    ],
+	\ 'S' : [":wa"                  , 'save all'     ],
 	\ 't' : [':CocCommand explorer' , 'coc explorer' ],
 	\ 'f' : [':Telescope fd'        , 'find files'   ],
 	\ 'h' : [':Telescope oldfiles'  , 'file history' ],
@@ -81,6 +94,7 @@ let g:which_key_map['b'] = {
       \ 'n' : ['bnext'     , 'next-buffer'     ],
       \ 'p' : ['bprevious' , 'previous-buffer' ],
       \ '?' : ['Buffers'   , 'fzf-buffer'      ],
+      \ 't' : ['terminal'  , 'terminal'        ],
       \ }
 
 let g:which_key_map['g'] = {

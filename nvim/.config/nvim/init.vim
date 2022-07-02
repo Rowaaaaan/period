@@ -46,10 +46,10 @@ if (empty($TMUX))
   endif
 endif
 
-colorscheme onedark
-let g:airline_theme='onedark'
-let g:onedark_termcolors=256
-let g:onedark_terminal_italics=1
+"colorscheme onedark
+"let g:airline_theme='onedark'
+"let g:onedark_termcolors=256
+"let g:onedark_terminal_italics=1
 
 " LaTex
 let g:livepreview_previewer='zathura'
