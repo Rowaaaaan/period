@@ -57,7 +57,7 @@ call plug#begin('~/.vim/plugged')
 
 " Bloat ================================================================ {{
 
-	Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+	"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'vim-airline/vim-airline'
