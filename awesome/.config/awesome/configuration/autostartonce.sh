@@ -17,6 +17,7 @@ APPS=(
     # $HOME/.config/awesomestart
     picom
     copyq
+    redshift -l 24.387:118.883
 )
 
 # Some applications start child applications that need to be killed on reload
