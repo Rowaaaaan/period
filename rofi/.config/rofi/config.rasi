@@ -188,3 +188,5 @@ error-message {
     padding: 1em;
 }
 @import "/usr/share/rofi/themes/arthur.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
