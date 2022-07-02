@@ -9,36 +9,36 @@ awful.screen.connect_for_each_screen(function(s)
     --awful.tag({ "dead", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
     local default_layout = awful.layout.suit.tile
 
-    awful.tag.add("Browser", {
+    awful.tag.add("⏺", {
         layout = default_layout,
         screen = s,
         selected = true,
     })
-    awful.tag.add("Terminal", {
+    awful.tag.add("⏺", {
         layout = default_layout,
         screen = s,
     })
-    awful.tag.add("Code", {
+    awful.tag.add("⏺", {
         layout = default_layout,
         screen = s,
     })
-    awful.tag.add("Chat", {
+    awful.tag.add("⏺", {
         layout = default_layout,
         screen = s,
     })
-    awful.tag.add("Files", {
+    awful.tag.add("⏺", {
         layout = default_layout,
         screen = s,
     })
-    awful.tag.add("Documents", {
+    awful.tag.add("⏺", {
         layout = default_layout,
         screen = s,
     })
-    awful.tag.add("Videos", {
+    awful.tag.add("⏺", {
         layout = default_layout,
         screen = s,
     })
-    awful.tag.add("Music", {
+    awful.tag.add("⏺", {
         layout = default_layout,
         screen = s,
     })
