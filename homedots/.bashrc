@@ -49,7 +49,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -65,10 +65,10 @@ fi
 # Shows git status in prompt
 if [ -f /etc/bash_completion.d/git-prompt ]; then
 	source /etc/bash_completion.d/git-prompt
-elif [ -f /usr/share/bash-completion/completions/git ]; then
-	source /usr/share/bash-completion/completions/git
 elif [ -f /usr/share/git/git-prompt.sh ]; then
 	source /usr/share/git/git-prompt.sh
+elif [ -f /usr/share/bash-completion/completions/git ]; then
+	source /usr/share/bash-completion/completions/git
 fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
