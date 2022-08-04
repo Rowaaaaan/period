@@ -1,11 +1,11 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
+if empty(glob('~/.nvim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.nvim/plugged')
 
 	Plug 'tpope/vim-sensible'
 	Plug 'tpope/vim-sleuth'
@@ -61,7 +61,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'vim-airline/vim-airline'
-	Plug 'joshdick/onedark.vim'
+	Plug 'joshdick/onedark.vim', { 'dir': '$HOME/.config/nvim/autoload/onedark.vim', 'do': 'mv autoload/onedark.vim/ colors/' }
 	Plug 'kyoz/purify', { 'rtp': 'vim' }
 	"Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " Shows colors from hex and rgb codes
 	Plug 'ryanoasis/vim-devicons'
