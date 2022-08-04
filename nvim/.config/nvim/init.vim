@@ -46,11 +46,6 @@ if (empty($TMUX))
   endif
 endif
 
-"colorscheme onedark
-"let g:airline_theme='onedark'
-"let g:onedark_termcolors=256
-"let g:onedark_terminal_italics=1
-
 " LaTex
 let g:livepreview_previewer='zathura'
 let g:liveprevier_engine='pdflatex'
@@ -61,3 +56,9 @@ let g:dashboard_default_executive = 'telescope'
 " Neovide
 let g:neovide_cursor_vfx_mode="railgun"
 set guifont=FiraCode
+
+colorscheme onedark
+"let g:airline_theme='onedark'
+"let g:onedark_termcolors=256
+"let g:onedark_terminal_italics=1
+
