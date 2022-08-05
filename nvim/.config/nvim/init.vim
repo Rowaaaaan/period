@@ -2,6 +2,7 @@ source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/keys.vim
 source ~/.config/nvim/autocmds.vim
 source ~/.config/nvim/commands.vim
+source ~/.config/nvim/dashboard.lua
 
 " Base settings
 set nocompatible
@@ -57,8 +58,7 @@ let g:dashboard_default_executive = 'telescope'
 let g:neovide_cursor_vfx_mode="railgun"
 set guifont=FiraCode
 
-colorscheme onedark
+"colorscheme onedark
 "let g:airline_theme='onedark'
 "let g:onedark_termcolors=256
 "let g:onedark_terminal_italics=1
-
