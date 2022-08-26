@@ -142,11 +142,6 @@ if ! shopt -oq posix; then
 	fi
 fi
 
-# mkdir and cd into it
-mkc(){
-	mkdir "$1" && cd "$1"
-}
-
 PATH="$PATH:/usr/sbin:~/.local/bin"
 . "$HOME/.cargo/env"
 
@@ -174,3 +169,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Personal functions
+
+# mkdir and cd into it
+mkc(){ mkdir "$1" && cd "$1" ; }
+
+# envs.sh aliases
+0file() { curl -F"file=@$1" https://envs.sh ; }
+0pb() { curl -F"file=@-;" https://envs.sh ; }
+0url() { curl -F"url=$1" https://envs.sh ; }
+0short() { curl -F"shorten=$1" https://envs.sh ; }
