@@ -21,8 +21,8 @@ return {
 
 		'signal-desktop', -- Signal chat application
 
-		"xidlehook --not-when-audio --not-when-fullscreen \
-			--timer 600 'sudo zzz' - ", -- Autosuspend on idle after x seconds
+		-- Autosuspend on idle after x seconds
+		'xidlehook --not-when-audio --not-when-fullscreen --timer 600 "sudo zzz" - ',
 
 		"udiskie -as -f thunar --terminal kitty", -- Automount disks
 
