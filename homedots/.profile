@@ -26,6 +26,20 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Adds rofi scripts to PATH so that I can actually use them
+if [ -d "$HOME/.config/rofi/bin" ]; then
+    PATH="$PATH:~/.config/rofi/bin"
+fi
+
+if [ -d "$HOME/.local/scripts" ]; then
+    PATH="$PATH:$HOME/.local/scripts"
+fi
+
+# Include binaries installed from cargo
+if [ -d "$HOME/.cargo/bin" ]; then
+    PATH="$PATH:$HOME/.cargo/bin"
+fi
+
 # Allows Anki to work in Wayland because wayland is ultra mega ass, and doesn't have the QT libraries it needs
 
 # export QT_QPA_PLATFORM=wayland
