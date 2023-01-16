@@ -61,7 +61,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'vim-airline/vim-airline'
-	Plug 'joshdick/onedark.vim'
+	Plug 'olimorris/onedarkpro.nvim'
 	Plug 'kyoz/purify', { 'rtp': 'vim' }
 	"Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " Shows colors from hex and rgb codes
 	Plug 'ryanoasis/vim-devicons'

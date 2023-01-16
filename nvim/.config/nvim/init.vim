@@ -58,7 +58,10 @@ let g:dashboard_default_executive = 'telescope'
 let g:neovide_cursor_vfx_mode="railgun"
 set guifont=FiraCode
 
-"colorscheme onedark
+colorscheme onedarkpro
 "let g:airline_theme='onedark'
 "let g:onedark_termcolors=256
 "let g:onedark_terminal_italics=1
+
+" vim-sneak
+let g:sneak#s_next = 1
