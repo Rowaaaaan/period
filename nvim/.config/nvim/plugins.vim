@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'                           " Surrounds text with either func name ex. main(), html tags, or brackets {} of choice
 	Plug 'jiangmiao/auto-pairs'                         " Automatically pairs brackets and parenthesis
 	Plug 'haya14busa/incsearch.vim'                     " Show search result-highlights whilst typing the query
+	Plug 'brooth/far.vim'
 
 " =============================================}}
 

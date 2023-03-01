@@ -65,3 +65,6 @@ colorscheme onedarkpro
 
 " vim-sneak
 let g:sneak#s_next = 1
+
+" Far.vim
+let g:far#enable_undo = 1

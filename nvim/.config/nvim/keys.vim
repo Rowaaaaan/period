@@ -99,15 +99,16 @@ let g:which_key_map['w'] = {
 
 let g:which_key_map['b'] = {
 			\ 'name' : 'Buffer' ,
-			\ '1' : ['b1'        , 'buffer 1'        ],
-			\ '2' : ['b2'        , 'buffer 2'        ],
-			\ 'd' : ['bd'        , 'delete-buffer'   ],
-			\ 'f' : ['bfirst'    , 'first-buffer'    ],
-			\ 'l' : ['blast'     , 'last-buffer'     ],
-			\ 'n' : ['bnext'     , 'next-buffer'     ],
-			\ 'p' : ['bprevious' , 'previous-buffer' ],
-			\ '?' : ['Buffers'   , 'fzf-buffer'      ],
-			\ 't' : ['!kitty -e bash & disown'  , 'terminal'        ]
+			\ '1' : ['b1'                      ,  'buffer 1'                ],
+			\ '2' : ['b2'                      ,  'buffer 2'                ],
+			\ 'd' : ['bd'                      ,  'delete-buffer'           ],
+			\ 'f' : ['bfirst'                  ,  'first-buffer'            ],
+			\ 'l' : ['blast'                   ,  'last-buffer'             ],
+			\ 'n' : ['bnext'                   ,  'next-buffer'             ],
+			\ 'p' : ['bprevious'               ,  'previous-buffer'         ],
+			\ '?' : ['Buffers'                 ,  'fzf-buffer'              ],
+			\ 't' : ['!kitty -e bash & disown' ,  'terminal'                ],
+			\ '#' : [":b#"                     ,  'Previously opened buffer']
 			\ }
 
 let g:which_key_map['g'] = {
