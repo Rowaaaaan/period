@@ -148,7 +148,6 @@ if ! shopt -oq posix; then
 fi
 
 PATH="$PATH:/usr/sbin:~/.local/bin"
-. "$HOME/.cargo/env"
 
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
@@ -173,6 +172,11 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Rust
+if [ -d "$HOME/.cargo/env" ]; then
+	source "$HOME/.cargo/env"
+fi
 
 # Personal functions
 
