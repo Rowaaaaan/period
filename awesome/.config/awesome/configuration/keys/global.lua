@@ -54,6 +54,14 @@ globalKeys = gears.table.join(
 		{description = "Spawn terminal explorer", group = "launcher"}
 		),
 
+	-- Open scratch Window
+	awful.key({ meta, shift }, "x",
+		function ()
+			awful.spawn(apps.scratch, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus)
+		end,
+		{description = "Spawn terminal explorer", group = "launcher"}
+		),
+
 	-- Toggle system tray
 	--awful.key({ modKey }, "=",
 	--function()

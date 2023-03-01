@@ -9,7 +9,8 @@ apps = {
 	-- Your default text editor
 	editor                        = os.getenv("EDITOR") or "nvim" or "vim",
 
-	-- editor_cmd                 = terminal .. " -e " .. editor,
+	-- Scratch window
+	scratch = os.getenv("EDITOR") or "nvim" or "vim" .. " -c setlocal buftype=nofile noswapfile bufhidden=wipe nobuflisted",
 
 	-- Your default file explorer
 	explorer                      = "thunar" or "pcmanfm",
@@ -32,6 +33,7 @@ apps = {
 apps.editor_cmd   = apps.terminal .. " -e " .. apps.editor
 apps.explorer_cmd = apps.terminal .. " -e " .. apps.explorer
 apps.term_explorer_cmd = apps.terminal .. " -e " .. apps.term_explorer
+apps.scratch = apps.terminal .. " -e " .. apps.scratch
 menubar.utils.terminal = apps.terminal -- Set the terminal for applications that require it
 
 
