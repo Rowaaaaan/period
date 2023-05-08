@@ -53,11 +53,13 @@ call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'godlygeek/tabular'							 " :Tab /regex can align code on occurrences of the given regex. I.e. :Tab /= aligns all = signs in a block.
 	Plug 'preservim/nerdcommenter'
+	Plug 'Yggdroot/indentLine'
 
 " =============================================}}
 
 " Bloat ================================================================ {{
 
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'vim-airline/vim-airline-themes'
@@ -71,7 +73,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'xuhdev/vim-latex-live-preview'
 	Plug 'onsails/lspkind-nvim'
 	Plug 'kyazdani42/nvim-web-devicons'
-	Plug 'Yggdroot/indentLine'
 	Plug 'glepnir/dashboard-nvim'
 	Plug 'nvim-lua/popup.nvim'
 	Plug 'nvim-lua/plenary.nvim'
