@@ -29,6 +29,6 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist {
       screen  = s,
       filter  = awful.widget.tasklist.filter.currenttags,
-      buttons = tasklist_buttons
+      buttons = tasklist_buttons,
     }
-end)
+  end)

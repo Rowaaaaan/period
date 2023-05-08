@@ -6,7 +6,7 @@ local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 
 clientKeys = gears.table.join(
-    awful.key({ modkey,           }, "f",
+    awful.key({ modkey,           }, "g",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()

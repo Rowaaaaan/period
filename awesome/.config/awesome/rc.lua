@@ -27,14 +27,18 @@ local themes = {
 	"gtk",        -- 2
 	"sky",        -- 3
 	"xresources", -- 4
-	"zenburn"     -- 5
+	"zenburn",    -- 5
+        "rowan"       -- 6
 }
 
 -- Which theme Awesome should use
-local selected_theme = 5
+local selected_theme = 6
 
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. string.format("%s/theme.lua", themes[selected_theme]))
+-- Get from system installed themes
+--beautiful.init(gears.filesystem.get_themes_dir() .. string.format("%s/theme.lua", themes[selected_theme]))
+-- Get from user config
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. string.format("%s/theme.lua", themes[selected_theme]))
 
 -- Init all modules (You can add/remove active modules here)
 require("modules.auto-start")

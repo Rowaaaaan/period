@@ -4,6 +4,7 @@ local client_keys = require('configuration.client.keys')
 local client_buttons = require('configuration.client.buttons')
 local title_bars = require('configuration.client.titlebars')
 local beautiful = require("beautiful")
+local config = require('configuration.config')
 
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
@@ -54,7 +55,14 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
+    },
+
+    { rule_any = {type = "dialog"}
+      , properties = {
+        x = awful.screen.focused().geometry.width / 2
+      , y = awful.screen.focused().geometry.height / 2
+      }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.

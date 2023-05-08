@@ -23,6 +23,7 @@ local configuration = {
 
   -- Width of the top panel
   toppanel_height      = dpi(20),
+  titlebars_enabled    = false,
 
 }
 
