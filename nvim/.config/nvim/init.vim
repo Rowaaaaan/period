@@ -58,13 +58,20 @@ let g:dashboard_default_executive = 'telescope'
 let g:neovide_cursor_vfx_mode="railgun"
 set guifont=FiraCode
 
-colorscheme onedarkpro
-"let g:airline_theme='onedark'
-"let g:onedark_termcolors=256
-"let g:onedark_terminal_italics=1
+colorscheme onedark_dark
+let g:airline_theme='google_dark'
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
 
 " vim-sneak
 let g:sneak#s_next = 1
 
 " Far.vim
 let g:far#enable_undo = 1
+
+" PHP-CS-Fixer
+let g:php_cs_fixer_path = glob('$HOME/.config/composer/vendor/bin/php-cs-fixer')
+
+" Treesitter
+" At the bottom of your init.vim, keep all configs on one line
+lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}
