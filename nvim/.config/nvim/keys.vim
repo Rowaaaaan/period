@@ -6,6 +6,21 @@ nnoremap <silent> <A-k> :resize +5<CR>
 nnoremap <silent> <A-h> <C-W>5<
 nnoremap <silent> <A-l> <C-W>5>
 
+" Scroll coc floating window
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
+
+" Toggle Coc completion because it blocks
+" Some terminals send <NUL> when you press <C-space>
+" inoremap <silent><expr> <NUL> coc#refresh()
+inoremap <silent><expr> <c-space> coc#refresh()
+
 " CoC Tab autocomplete
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -99,16 +114,16 @@ let g:which_key_map['w'] = {
 
 let g:which_key_map['b'] = {
 			\ 'name' : 'Buffer' ,
-			\ '1' : ['b1'                      ,  'buffer 1'                ],
-			\ '2' : ['b2'                      ,  'buffer 2'                ],
-			\ 'd' : ['bd'                      ,  'delete-buffer'           ],
-			\ 'f' : ['bfirst'                  ,  'first-buffer'            ],
-			\ 'l' : ['blast'                   ,  'last-buffer'             ],
-			\ 'n' : ['bnext'                   ,  'next-buffer'             ],
-			\ 'p' : ['bprevious'               ,  'previous-buffer'         ],
-			\ '?' : ['Buffers'                 ,  'fzf-buffer'              ],
-			\ 't' : ['!kitty -e bash & disown' ,  'terminal'                ],
-			\ '#' : [":b#"                     ,  'Previously opened buffer']
+			\ '1' : ['b1'                       , 'buffer 1'                ],
+			\ '2' : ['b2'                       , 'buffer 2'                ],
+			\ 'd' : ['bd'                       , 'delete-buffer'           ],
+			\ 'f' : ['bfirst'                   , 'first-buffer'            ],
+			\ 'l' : ['blast'                    , 'last-buffer'             ],
+			\ 'n' : ['bnext'                    , 'next-buffer'             ],
+			\ 'p' : ['bprevious'                , 'previous-buffer'         ],
+			\ '?' : ['Buffers'                  , 'fzf-buffer'              ],
+			\ 't' : [':!kitty -e bash & disown' , 'terminal'                ],
+			\ '#' : [":b#"                      , 'Previously opened buffer']
 			\ }
 
 let g:which_key_map['g'] = {
@@ -130,8 +145,9 @@ let g:which_key_map['s'] = {
 
 let g:which_key_map['l'] = {
 			\ 'name' : 'LSP'               ,
-			\ 'o': [':CocList outline'     ,	 'list outline'],
-			\ 'd': [':CocList diagnostics' , 'list diagnostics'],
+			\ 'o': [':CocList outline'               , 'list outline'     ],
+			\ 'd': [':CocList diagnostics'           , 'list diagnostics' ],
+			\ 'f': [":call CocActionAsync('format')" , 'format file'      ],
 			\ }
 
 call which_key#register('<Space>', "g:which_key_map")
