@@ -40,9 +40,18 @@ if [ -d "$HOME/.cargo/bin" ]; then
     PATH="$PATH:$HOME/.cargo/bin"
 fi
 
+# Check if neovim is installed, and set it as the editor if so.
+if [ -x "$(command -v nvim &> /dev/null)" ]; then
+    export EDITOR=nvim
+fi
+
 # Allows Anki to work in Wayland because wayland is ultra mega ass, and doesn't have the QT libraries it needs
 
 # export QT_QPA_PLATFORM=wayland
 # export ANKI_WAYLAND=1
+
+# Set compilers for build scripts
+export CXX="g++"
+export C="gcc"
 
 setxkbmap -option caps:swapescape
