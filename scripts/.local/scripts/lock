@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+if ! [ $(pgrep -x i3lock) > /dev/null ]; then
+	betterlockscreen -l -- -ef --greeter-text='Enter the void...'
+fi
