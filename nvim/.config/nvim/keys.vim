@@ -137,8 +137,8 @@ let g:which_key_map['g'] = {
 let g:which_key_map['s'] = {
 			\ 'name' : 'Sessions'  ,
 			\ 'd' : ['Dashboard'   , 'home-buffer' ],
-			\ 's' : ['SessionSave' , 'save session'],
-			\ 'l' : ['SessionLoad' , 'load session'],
+			\ 's' : [':mksession!' , 'save session'],
+			\ 'l' : [':source Session.vim' , 'load session'],
 			\ }
 
 " ==================================== }}
