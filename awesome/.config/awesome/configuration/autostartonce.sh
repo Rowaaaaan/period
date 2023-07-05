@@ -18,6 +18,7 @@ APPS=(
     picom
     copyq
     redshift -l 24.387:118.883
+    #fcitx5 -d
 )
 
 # Some applications start child applications that need to be killed on reload

@@ -54,4 +54,10 @@ fi
 export CXX="g++"
 export C="gcc"
 
+# fcitx
+#export GTK_IM_MODULE=fcitx
+#export QT_IM_MODULE=fcitx
+#export XMODIFIERS=@im=fcitx
+#export GLFW_IM_MODULE=ibus
+
 setxkbmap -option caps:swapescape
