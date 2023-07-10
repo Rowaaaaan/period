@@ -69,7 +69,7 @@ call plug#begin('~/.config/nvim/plugged')
 	"Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " Shows colors from hex and rgb codes
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'psliwka/vim-smoothie'
-	Plug 'vimwiki/vimwiki', { 'branch' : 'dev' }
+	"Plug 'vimwiki/vimwiki', { 'branch' : 'dev' }
 	Plug 'xuhdev/vim-latex-live-preview'
 	Plug 'onsails/lspkind-nvim'
 	Plug 'kyazdani42/nvim-web-devicons'
