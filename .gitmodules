@@ -1,3 +1,6 @@
 [submodule "tridactyl/.config/tridactyl/themes"]
 	path = tridactyl/.config/tridactyl/themes
 	url = https://github.com/bezmi/base16-tridactyl
+[submodule "awesome/.config/awesome/awesome-wm-widgets"]
+	path = awesome/.config/awesome/awesome-wm-widgets
+	url = https://github.com/streetturtle/awesome-wm-widgets
