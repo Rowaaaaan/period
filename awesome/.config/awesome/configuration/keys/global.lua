@@ -147,16 +147,16 @@ globalKeys = gears.table.join(
 		{ description = "go back", group = "tag" }),
 
 	-- Directional window focusing
-	awful.key({ meta, }, "j", function() wh.focus_window("down") end,
+	awful.key({ meta, }, "j", function() wh.focus_window("down", -1) end,
 		{ description = "focus down by direction", group = "client" }
 	),
-	awful.key({ meta, }, "k", function() wh.focus_window("up") end,
+	awful.key({ meta, }, "k", function() wh.focus_window("up", 1) end,
 		{ description = "focus up by direction", group = "client" }
 	),
-	awful.key({ meta, }, "h", function() wh.focus_window("left") end,
+	awful.key({ meta, }, "h", function() wh.focus_window("left", -1) end,
 		{ description = "focus left by direction", group = "client" }
 	),
-	awful.key({ meta, }, "l", function() wh.focus_window("right") end,
+	awful.key({ meta, }, "l", function() wh.focus_window("right", 1) end,
 		{ description = "focus right by direction", group = "client" }
 	),
 	awful.key({ meta, }, "w", function() mymainmenu:show() end,
