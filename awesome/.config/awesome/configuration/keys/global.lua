@@ -1,6 +1,8 @@
 local awful = require('awful')
 local gears = require("gears")
+local naughty = require('naughty')
 local menubar = require("menubar")
+local bw = require('awesome-wm-widgets.brightness-widget.brightness')
 
 require('awful.autofocus')
 local beautiful = require('beautiful')
@@ -70,7 +72,7 @@ globalKeys = gears.table.join(
 	--function()
 	--awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible
 	--end,
-	--{description = "Toggle systray", group = "hotkeys"}
+	--{ description = "Toggle systray", group = "hotkeys" }
 	--),
 
 	-- screenshots
@@ -80,9 +82,13 @@ globalKeys = gears.table.join(
 		{ description = "Flameshot full ~/Pictures/Screenshots", group = "screenshots" }),
 
 	-- Brightness
-	awful.key({}, "XF86MonBrightnessUp", function() os.execute("light -A 10") end,
+	awful.key({}, "XF86MonBrightnessUp", function()
+			bw:inc()
+		end,
 		{ description = "+10%", group = "hotkeys" }),
-	awful.key({}, "XF86MonBrightnessDown", function() os.execute("light -U 10") end,
+	awful.key({}, "XF86MonBrightnessDown", function()
+			bw:dec()
+		end,
 		{ description = "-10%", group = "hotkeys" }),
 
 	-- ALSA volume control
