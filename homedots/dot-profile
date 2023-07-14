@@ -61,6 +61,6 @@ export XMODIFIERS=@im=fcitx
 export GLFW_IM_MODULE=ibus
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-if [ $XDG_BACKEND != 'wayland' ]; then
+if [ "$XDG_BACKEND" != 'wayland' ]; then
     setxkbmap -option caps:swapescape
 fi
