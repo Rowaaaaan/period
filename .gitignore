@@ -1,2 +1,4 @@
 ranger/.config/ranger/plugins/__pycache__/*
 ranger/.config/ranger/__pycache__/*
+.vim/coc-settings.json
+awesome/.config/awesome/awesome-wm-widgets
