@@ -27,7 +27,7 @@ globalKeys = gears.table.join(
 		{ description = "Rofi launcher", group = "launcher" }
 	),
 
-	awful.key({ meta, alt }, "l", function() awful.spawn(apps.scrlocker) end,
+	awful.key({ meta, alt }, "l", function() awful.spawn.with_shell(apps.scrlocker) end,
 		{ description = "Lock screen", group = "Session" }
 	),
 
@@ -44,7 +44,7 @@ globalKeys = gears.table.join(
 
 	awful.key({ meta }, "e",
 		function()
-			awful.spawn(apps.explorer, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus,
+			awful.spawn.with_shell(apps.explorer, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus,
 				beautiful.fg_focus)
 		end,
 		{ description = "Spawn GUI file manager", group = "launcher" }
@@ -52,7 +52,7 @@ globalKeys = gears.table.join(
 
 	awful.key({ meta, shift }, "e",
 		function()
-			awfulexplorer.spawn(apps.term_explorer_cmd, beautiful.bg_normal, beautiful.fg_normal,
+			awful.spawn.with_shell(apps.term_explorer_cmd, beautiful.bg_normal, beautiful.fg_normal,
 				beautiful.bg_focus, beautiful.fg_focus)
 		end,
 		{ description = "Spawn terminal explorer", group = "launcher" }
@@ -61,7 +61,7 @@ globalKeys = gears.table.join(
 	-- Open scratch Window
 	awful.key({ meta, shift }, "x",
 		function()
-			awful.spawn(apps.scratch, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus,
+			awful.spawn.with_shell(apps.scratch, beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus,
 				beautiful.fg_focus)
 		end,
 		{ description = "Spawn terminal explorer", group = "launcher" }
