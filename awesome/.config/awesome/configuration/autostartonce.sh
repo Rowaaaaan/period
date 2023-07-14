@@ -16,9 +16,11 @@ APPS=(
     # radeon-profile
     # $HOME/.config/awesomestart
     picom
+    playerctld
     copyq
-    redshift -l 24.387:118.883
-    fcitx5 -d
+    "redshift -l 0:0"
+    "fcitx5 -d"
+    nm-applet
 )
 
 # Some applications start child applications that need to be killed on reload
