@@ -21,4 +21,19 @@ function helpers.focus_window(direction, idx)
     end
 end
 
+function helpers.toggle_wibar()
+    local p = mouse.screen.top_panel
+    if p ~= nil then
+        p.visible = not p.visible
+    end
+end
+
+function helpers.toggle_all_wibars()
+    for s in screen do
+        if s.top_panel ~= nil then
+            s.top_panel.visible = not s.top_panel.visible
+        end
+    end
+end
+
 return helpers
