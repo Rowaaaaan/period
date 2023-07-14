@@ -1,5 +1,8 @@
 #!/bin/sh -e
 
 if ! [ $(pgrep -x i3lock) > /dev/null ]; then
-	betterlockscreen -l -- -ef --greeter-text='Enter the void...'
+	playerctl -a pause
+	pamixer -m
+	betterlockscreen -l
+	pamixer -t
 fi
