@@ -1,4 +1,8 @@
 alias v="nvim"
+alias lg="lazygit"
+alias ipify="printf 'Public IP: %s\n' $(curl -s https://api.ipify.org)"
+
+# ytfzf aliases
 alias yt="ytfzf"
 alias yta="ytfzf -ma"
 alias rick="curl 34.244.211.48:8000"
