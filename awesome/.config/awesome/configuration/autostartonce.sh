@@ -20,7 +20,6 @@ APPS=(
     copyq
     "redshift -l 0:0"
     "fcitx5 -d"
-    nm-applet
 )
 
 # Some applications start child applications that need to be killed on reload

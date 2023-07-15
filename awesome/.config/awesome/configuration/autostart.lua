@@ -6,27 +6,26 @@ return {
 	run_on_start_up = {
 
 		-- 'picom --config ' .. filesystem.get_configuration_dir() .. 'configuration/picom.conf',
-		'nm-applet --indicator', -- wifi
+		'nm-applet',                                                                                                                  -- wifi
 		--'blueberry-tray', -- Bluetooth tray icon
-		'xfce4-power-manager', -- Power manager
-		'numlockx on', -- enable numlock
+		'numlockx on',                                                                                                                -- enable numlock
 		-- '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager (alternate directory if the first one is incorrect)
 		'/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1  & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
 		--'/usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
 		-- '/usr/libexec/polkit-gnome-authentication-agent-1', -- credential manager - path for void linux
 
-		'blueman-tray', -- bluetooth tray
+		'blueman-applet', -- bluetooth tray
 
 		apps.browser,
 
-		'signal-desktop', -- Signal chat application
+		apps.chat_app, -- Signal chat application
 
 		-- Autosuspend on idle after x seconds
 		'xidlehook --not-when-audio --not-when-fullscreen --timer 600 "sudo zzz" - ',
-
+		'xss-lock ' .. apps.scrlocker,
 		"udiskie -as -f thunar --terminal kitty", -- Automount disks
 
-		"pa-applet", -- Volume applet
+		"pa-applet",                        -- Volume applet
 
 		-- Add applications that need to be killed between reloads
 		-- to avoid multipled instances, inside the awspawn script

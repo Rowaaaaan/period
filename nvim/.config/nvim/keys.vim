@@ -114,22 +114,24 @@ let g:which_key_map['w'] = {
 
 let g:which_key_map['b'] = {
 			\ 'name' : 'Buffer' ,
-			\ '1' : ['b1'                       , 'buffer 1'                ],
-			\ '2' : ['b2'                       , 'buffer 2'                ],
-			\ 'd' : ['bd'                       , 'delete-buffer'           ],
-			\ 'f' : ['bfirst'                   , 'first-buffer'            ],
-			\ 'l' : ['blast'                    , 'last-buffer'             ],
-			\ 'n' : ['bnext'                    , 'next-buffer'             ],
-			\ 'p' : ['bprevious'                , 'previous-buffer'         ],
-			\ '?' : ['Buffers'                  , 'fzf-buffer'              ],
-			\ 't' : [':!kitty -e bash & disown' , 'terminal'                ],
+			\ '1' : ['b1'                       , 'buffer 1'                  ],
+			\ '2' : ['b2'                       , 'buffer 2'                  ],
+			\ 'd' : ['bd'                       , 'delete-buffer'             ],
+			\ 'f' : ['bfirst'                   , 'first-buffer'              ],
+			\ 'l' : ['blast'                    , 'last-buffer'               ],
+			\ 'n' : ['bnext'                    , 'next-buffer'               ],
+			\ 'p' : ['bprevious'                , 'previous-buffer'           ],
+			\ '?' : ['Buffers'                  , 'fzf-buffer'                ],
+			\ 't' : [':!kitty -e bash & disown' , 'terminal'                  ],
+			\ 'g' : [':!kitty -e lazygit & disown' , 'git gui using lazygit'  ],
 			\ '#' : [":b#"                      , 'Previously opened buffer']
 			\ }
 
 let g:which_key_map['g'] = {
 			\ 'name' : 'Git'         ,
 			\ 's' : [':Git'            , 'git status' ],
-			\ 'g' : [':Git pull'       , 'git pull'   ],
+			\ 'P' : [':Git pull'       , 'git pull'   ],
+			\ 'g' : [':LazyGit'       , 'git pull'   ],
 			\ 'c' : [':Git commit'     , 'git commit' ],
 			\ 'p' : [':Git push'       , 'git push'   ],
 			\ }

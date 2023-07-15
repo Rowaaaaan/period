@@ -38,6 +38,9 @@ call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'tpope/vim-fugitive'
 
+	" nvim v0.7.2
+	Plug 'kdheepak/lazygit.nvim'
+
 " =============================================}}
 
 " Navigation ================================={{
