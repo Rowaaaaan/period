@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 if ! [ $(pgrep -x i3lock) > /dev/null ]; then
-	playerctl -a pause
+	playerctl -a pause 2&> /dev/null
 	pamixer -m
 	betterlockscreen -l
 	pamixer -t
