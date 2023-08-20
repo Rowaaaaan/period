@@ -1,0 +1,19 @@
+#!/bin/sh -e
+
+if ! [ $(pgrep -x i3lock) > /dev/null ]; then
+	i3lock --clock --wrong-text="Incorrect password!" \
+		--greeter-text="Enter the void..." \
+		--greeter-color=ffffffff \
+		--verif-color=ffffffff \
+		--time-str="%H:%M:%S" \
+		--date-color=ffffffff \
+		--time-color=ffffffff \
+		--timeoutline-color=000000ff \
+		--image=/usr/share/backgrounds/ \
+		--slideshow-interval 60 \
+		--slideshow-random-selection \
+		--fill \
+		--bar-indicator \
+		--pass-media-keys \
+		--pass-volume-keys
+fi
