@@ -1,7 +1,0 @@
-{
-  "intelephense.environment.phpVersion": "8.2.0",
-  "coc.preferences.formatOnSave": true,
-  "codeLens.enable": true,
-  "php-cs-fixer.activateTool": "php-cs-fixer",
-  "php-cs-fixer.toolPath": "$HOME/.config/composer/vendor/bin/php-cs-fixer"
-}
